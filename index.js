@@ -21,15 +21,16 @@ bot.start(async (ctx) => {
 bot.hears('📋 O\'quv kurslar', async (ctx) => {
     return await ctx.reply('📋 O\'quv kurslar', Markup
       .keyboard([
-        ['Office dasturlar', 'Smm Marketing'],
-        ['🔝 Main Menu']
+        ['🌐 Web dasturlash', '🧾 1C Buxgalteyiya'],
+        ['🇬🇧 Ingiliz tili ', '🖥 Office dasturlari', '🎨 SMM va Dizayn '],
+        ['🇰🇷 Koreys tili', '🔝 Main Menu']
       ])
       .resize()
     )
   })
 
   bot.hears('☎️ Aloqa', async (ctx) => {
-    return await ctx.replyWithHTML('☎️ Aloqa - bu biz bn aloqa uchun +998975109234', 
+    return await ctx.replyWithHTML('☎️ Aloqa - bu biz bn aloqa uchun +998943157889', 
     )
   })
 
@@ -122,5 +123,8 @@ bot.action("send", (ctx) => {
   );
 });
 
+bot.hears('📍 Joylashuv', async (ctx) => {
+  ctx.telegram.sendLocation(ctx.chat.id, 41.56044515274724, 60.607803062078204)
+})
 
 bot.launch();
