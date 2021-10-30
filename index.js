@@ -32,6 +32,11 @@ bot.hears('📋 O\'quv kurslar', async (ctx) => {
     )
   })
 
+  bot.hears('☎️ Aloqa', async (ctx) => {
+    return await ctx.replyWithHTML('☎️ Aloqa - bu biz bn aloqa uchun +998975109234', 
+    )
+  })
+
   bot.hears('🔝 Main Menu', async (ctx) => {
     return await ctx.reply('🔝 Main Menu',Markup
       .keyboard([
