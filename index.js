@@ -116,8 +116,9 @@ bot.command("/send", (ctx) =>
     `Ism: ${ctx.session?.name}\nYoshi: ${ctx.session?.age}\nTanlangan yo\'nalish: ${ctx.session?.course}\nMa\'lumoti: ${ctx.session?.info}`
   )
 );
-bot.action("send", (ctx) => {
-  return ctx.telegram.sendMessage(
+bot.action("send", async (ctx) => {
+  await ctx.answerCbQuery()
+  await ctx.telegram.sendMessage(
     chatId,
     `Yangi o'quvchi\n\n👨‍🎓 Ismi: ${ctx.session?.name}\n🧍 Yoshi: ${ctx.session?.age}\n💻 Tanlangan yo\'nalish: ${ctx.session?.course}\n📚 Ma\'lumoti: ${ctx.session?.info}`
   );
