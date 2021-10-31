@@ -45,7 +45,7 @@ bot.hears('📋 O\'quv kurslar', async (ctx) => {
   })
 
 bot.hears('🔷 ITC-HUB haqida 🔷', async (ctx) => {
-    return await ctx.reply('Itc-hub bu innovatsion o\'quv markaz hisoblanadi'
+    return await ctx.reply('Itc-hub bu innovatsion o\'quv markaz hisoblanadi bu yerda siz zamonaviy kasblarni organishingiz mumkin'
     )
   })
 
@@ -96,8 +96,6 @@ infoScene.on("text", (ctx) => {
   return ctx.scene.leave();
 });
 
-//const bot = new Telegraf("TOKEN");
-//const chatId = 1018120467;
 const stage = new Stage([nameScene, ageScene, courseScene, infoScene]);
 stage.hears("exit", (ctx) => ctx.scene.leave());
 
